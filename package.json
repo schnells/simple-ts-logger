@@ -2,9 +2,11 @@
   "name": "simple-ts-logger",
   "version": "0.0.1",
   "description": "This is a simple ts logger",
-  "main": "index.js",
+  "main": "dist/index.js",       
+  "types": "dist/index.d.ts",    
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
     "loglevel"
   ],
   "author": "Simon Schnell",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
 }
