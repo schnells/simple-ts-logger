@@ -1,35 +1,23 @@
 {
   "name": "simple-ts-logger",
-  "version": "0.0.6",
-  "description": "This is a simple ts logger",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js"
-  },
-  "type": "module",
+  "version": "0.0.8",
+  "description": "A simple TypeScript logger",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "build": "npm run build:cjs && npm run build:esm",
+    "build": "tsc",
     "start": "ts-node src/index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/schnells/simple-ts-logger.git"
   },
   "keywords": [
     "logging",
     "logger",
-    "typescript",
-    "loglevel"
+    "typescript"
   ],
   "author": "Simon Schnell",
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/node": "^22.9.0",
-    "typescript": "^5.6.3"
+    "ts-node": "^10.0.0",
+    "typescript": "^5.2.2"
   }
 }
