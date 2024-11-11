@@ -1,6 +1,6 @@
 {
   "name": "simple-ts-logger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a simple ts logger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
