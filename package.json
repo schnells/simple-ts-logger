@@ -1,0 +1,21 @@
+{
+  "name": "simple-ts-logger",
+  "version": "0.0.1",
+  "description": "This is a simple ts logger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schnells/simple-ts-logger.git"
+  },
+  "keywords": [
+    "logging",
+    "logger",
+    "typescript",
+    "loglevel"
+  ],
+  "author": "Simon Schnell",
+  "license": "Apache-2.0"
+}
