@@ -1,9 +1,9 @@
 {
   "name": "simple-ts-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a simple ts logger",
-  "main": "dist/index.js",       
-  "types": "dist/index.d.ts",    
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/index.ts"
