@@ -1,13 +1,7 @@
 {
   "name": "simple-ts-logger",
-  "version": "0.0.8",
+  "version": "0.0.13",
   "description": "A simple TypeScript logger",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "start": "ts-node src/index.ts"
-  },
   "keywords": [
     "logging",
     "logger",
@@ -15,9 +9,23 @@
   ],
   "author": "Simon Schnell",
   "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests specified\" && exit 0",
+    "prepare": "npm run build"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^22.9.0",
-    "ts-node": "^10.0.0",
-    "typescript": "^5.2.2"
-  }
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schnells/simple-ts-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/schnells/simple-ts-logger/issues"
+  },
+  "homepage": "https://github.com/schnells/simple-ts-logger#readme"
 }

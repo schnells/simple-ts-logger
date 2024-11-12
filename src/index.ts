@@ -33,4 +33,4 @@ class Logger {
   }
 }
 
-export default new Logger();
+export default Logger;
