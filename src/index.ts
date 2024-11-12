@@ -1,6 +1,6 @@
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
-export class Logger {
+class Logger {
   private currentLevel: LogLevel;
 
   constructor() {
@@ -32,3 +32,6 @@ export class Logger {
     this.log('error', message);
   }
 }
+
+const logger = new Logger();
+export default logger;
