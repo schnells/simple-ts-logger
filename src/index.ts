@@ -2,34 +2,37 @@ type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 class Logger {
   private currentLevel: LogLevel;
+  private static levels: LogLevel[] = ['debug', 'info', 'warn', 'error'];
 
   constructor() {
-    // Log-Level wird aus den Umgebungsvariablen abgeleitet oder auf 'info' gesetzt
     const envLogLevel = (process.env.LOG_LEVEL || 'info') as LogLevel;
     this.currentLevel = envLogLevel;
   }
 
-  private log(level: LogLevel, message: string) {
-    const levels: LogLevel[] = ['debug', 'info', 'warn', 'error'];
-    if (levels.indexOf(level) >= levels.indexOf(this.currentLevel)) {
-      console.log(`[${level.toUpperCase()}] ${message}`);
+  private log(level: LogLevel, ...args: any[]) {
+    if (Logger.levels.indexOf(level) >= Logger.levels.indexOf(this.currentLevel)) {
+      if (level === 'error') {
+        console.error(`[ERROR]`, ...args);
+      } else {
+        console.log(`[${level.toUpperCase()}]`, ...args);
+      }
     }
   }
 
-  debug(message: string) {
-    this.log('debug', message);
+  debug(...args: any[]) {
+    this.log('debug', ...args);
   }
 
-  info(message: string) {
-    this.log('info', message);
+  info(...args: any[]) {
+    this.log('info', ...args);
   }
 
-  warn(message: string) {
-    this.log('warn', message);
+  warn(...args: any[]) {
+    this.log('warn', ...args);
   }
 
-  error(message: string) {
-    this.log('error', message);
+  error(...args: any[]) {
+    this.log('error', ...args);
   }
 }
 
